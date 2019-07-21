@@ -63,6 +63,10 @@ export default {
         const tableContent = text
           .split('<tbody id="mwkg">')[1]
           .split('</tbody>')[0]
+          .replace(
+            /(href="\.\/)/g,
+            'target="_blank" href="https://en.wikipedia.org/wiki/'
+          )
         const table = document.createElement('table')
         table.innerHTML = tableContent
         const tableEntries = tableToJson(table)
