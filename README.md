@@ -6,6 +6,8 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Twitter: CapnAwesome](https://img.shields.io/twitter/follow/CapnAwesome.svg?style=social)](https://twitter.com/CapnAwesome)
 
+![App screenshot](assets/screenshots/app.png)
+
 > A clock in vue fetching and displaying wikipedia's &#34;minutes to midnight&#34; from the Bulletin of the Atomic Scientists
 
 ### 🏠 [Homepage](https://pterobyte.github.io/doomsday-clock/)
