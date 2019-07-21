@@ -1,10 +1,15 @@
 <template>
   <main>
     <div class="polygon"></div>
-    <h1>It is now {{ time.minutes }} minutes to midnight</h1>
+    <h1>
+      It is now {{ 60 - time.minutes }} minute{{
+        time.minutes !== 1 ? 's' : ''
+      }}
+      to midnight
+    </h1>
     <analog-clock :minute="time.minutes" :tick="tick" :time="time" />
     <!-- <text-clock :time="time" /> -->
-    <aside class="reason" v-html="wikiMostRecentEntry.reason"></aside>
+    <aside class="reason" v-html="wikiEntryReason"></aside>
   </main>
 </template>
 
@@ -24,6 +29,7 @@ export default {
       wikiHTML: null,
       wikiTableEntries: null,
       wikiMostRecentEntry: null,
+      wikiEntryReason: null,
       tick: 0,
       time: { hours: 0, minutes: 0, seconds: 0 }
     }
@@ -64,6 +70,7 @@ export default {
         this.wikiHTML = tableContent
         this.wikiTableEntries = tableEntries
         this.wikiMostRecentEntry = mostRecentEntry
+        this.wikiEntryReason = mostRecentEntry.reason
         this.time = {
           hours: 23,
           minutes: 60 - mostRecentEntry.minutestomidnight,
@@ -92,6 +99,9 @@ export default {
   --clock-seconds-hand: hsl(350, 75%, 50%);
   --tertiary-color: hsl(350, 75%, 50%);
   --send-back-one: -1;
+  --tablet-width: 900px;
+  --xl-phone-width: 650px;
+  --sm-phone-width: 500px;
 }
 html {
   background-color: var(--background-color);
@@ -121,8 +131,20 @@ sup {
 }
 
 .reason {
-  padding: 10rem 10rem 0 3rem;
+  padding: 8rem 10rem 0 3rem;
   text-align: left;
+
+  @media (max-width: 900px) {
+    padding: 6rem 5rem 0 5rem;
+  }
+
+  @media (max-width: 650px) {
+    padding: 4rem 2rem 0 2rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1rem 1rem 0 1rem;
+  }
 }
 .polygon {
   position: absolute;

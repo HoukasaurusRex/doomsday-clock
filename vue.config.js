@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: 'doomsday-clock'
+  publicPath: process.env.NODE_ENV === 'production' ? 'doomsday-clock' : ''
 }

@@ -106,6 +106,27 @@ export default {
     right: -20%;
     width: 80vh;
     height: 80vh;
+
+    @media (max-width: 900px) {
+      bottom: -65%;
+      right: -25%;
+      height: 70vh;
+      width: 70vh;
+    }
+
+    @media (max-width: 650px) {
+      bottom: -55%;
+      right: -30%;
+      height: 60vh;
+      width: 60vh;
+    }
+
+    @media (max-width: 500px) {
+      bottom: -50%;
+      right: -55%;
+      height: 50vh;
+      width: 50vh;
+    }
   }
 
   &::after {
@@ -156,11 +177,11 @@ export default {
     transform-origin: 50% 100%;
     background-color: var(--secondary-color);
     position: absolute;
-    width: 2px;
+    width: 0.5rem;
     height: 40%;
     bottom: 50%;
     left: 50%;
-    border-radius: 2px;
+    border-radius: 30px;
     transition: transform 1s linear;
 
     &::after {
@@ -176,8 +197,8 @@ export default {
 
     &.-hours {
       height: calc(100% / 3);
-      width: 3px;
-      border-radius: 3px;
+      width: 0.8rem;
+      border-radius: 30px;
       transition: transform 60s linear;
     }
 
