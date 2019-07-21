@@ -3,6 +3,7 @@
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Pterobyte/doomsday-clock/tree/master/LICENSE)
 [![David Dependencies Status](https://david-dm.org/pterobyte/doomsday-clock.svg)](https://david-dm.org/pterobyte/doomsday-clock)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Pterobyte/doomsday-clock.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Pterobyte/doomsday-clock/context:javascript)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Twitter: CapnAwesome](https://img.shields.io/twitter/follow/CapnAwesome.svg?style=social)](https://twitter.com/CapnAwesome)
 
